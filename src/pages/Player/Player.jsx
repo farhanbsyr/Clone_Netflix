@@ -1,4 +1,5 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import "./Player.css";
 import back_arrow from "../../assets/back_arrow_icon.png";
 const Player = () => {

@@ -6,11 +6,13 @@ import Player from "./pages/Player/Player";
 
 const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/player/:id" element={<Player />} />
-    </Routes>
+    <div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/player/:id" element={<Player />} />
+      </Routes>
+    </div>
   );
 };
 
