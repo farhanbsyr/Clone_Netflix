@@ -30,7 +30,7 @@ const TitleCards = ({ title, category }) => {
       <h2>{title ? title : "Populer on Netflix"}</h2>
       <Swiper
         slidesPerView={5}
-        spaceBetween={10}
+        spaceBetween={75}
         pagination={{
           clickable: true,
         }}
