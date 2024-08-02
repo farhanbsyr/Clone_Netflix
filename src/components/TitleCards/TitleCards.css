@@ -6,18 +6,13 @@
   margin-bottom: 8px;
 }
 
-.card-list {
-  display: flex;
-  gap: 10px;
-  overflow-x: scroll;
-}
-.card-list::-webkit-scrollbar {
-  display: none;
-}
 .card-list img {
   width: 240px;
   border-radius: 4px;
   cursor: pointer;
+}
+.swiper-slide {
+  width: 400px;
 }
 
 .card-list .card {

@@ -10,7 +10,7 @@ const Login = () => {
 
   return (
     <div className="login">
-      <img src={logo} alt="netflix logo" className="login-logo" />
+      <img src={logo} alt="netflix logo" className="login-logo" width={150} />
       <div className="login-form">
         <h1>{sign === false ? "Sign Up" : "Sign In"}</h1>
         <form>
