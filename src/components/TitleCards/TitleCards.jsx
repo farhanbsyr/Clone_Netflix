@@ -30,7 +30,6 @@ const TitleCards = ({ title, category }) => {
       <h2>{title ? title : "Populer on Netflix"}</h2>
       <Swiper
         slidesPerView={5}
-        spaceBetween={75}
         pagination={{
           clickable: true,
         }}
@@ -40,7 +39,7 @@ const TitleCards = ({ title, category }) => {
         {movie.map((card, index) => (
           <SwiperSlide
             key={index}
-            className="swiper-slide"
+            className="swiper-slide card"
             style={{ width: "250px" }}
           >
             <img
