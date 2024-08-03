@@ -27,9 +27,11 @@ const Login = () => {
     <div className="login">
       <img src={logo} alt="netflix logo" className="login-logo" width={150} />
       <div className="login-form">
-        <h1>{sign === false ? "Sign Up" : "Sign In"}</h1>
+        <h1>{sign === false ? "Sign In" : "Sign Up"}</h1>
         <form>
           {sign === false ? (
+            <></>
+          ) : (
             <div className="form-group">
               <label htmlFor="name"></label>
               <input
@@ -44,8 +46,6 @@ const Login = () => {
                 placeholder="Enter your name"
               />
             </div>
-          ) : (
-            <></>
           )}
 
           <div className="form-group">
@@ -76,7 +76,7 @@ const Login = () => {
             />
           </div>
           <button onClick={user_auth} type="submit">
-            {sign === false ? "Sign Up" : "Sign In"}
+            {sign === false ? "Sign In" : "Sign Up"}
           </button>
           <div className="form-help">
             <div className="remember">
@@ -89,11 +89,11 @@ const Login = () => {
         <div className="form-switch">
           {sign === false ? (
             <p>
-              Already have account? <span onClick={handleSign}>Sign In</span>
+              New to Netflix? <span onClick={handleSign}>Sign Up Now</span>
             </p>
           ) : (
             <p>
-              New to Netflix? <span onClick={handleSign}>Sign Up Now</span>
+              Already have account? <span onClick={handleSign}>Sign In</span>
             </p>
           )}
         </div>
