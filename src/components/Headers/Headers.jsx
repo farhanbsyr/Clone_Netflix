@@ -26,7 +26,6 @@ const Headers = () => {
       <div className="header-left">
         <img src={logos} alt="logo netflix" width={100} />
         <ul>
-          <Link to="/login">Login</Link>
           <li>Home</li>
           <li>TV Show</li>
           <li>Movie</li>
