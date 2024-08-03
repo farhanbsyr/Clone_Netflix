@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 
 const TitleCards = ({ title, category }) => {
   const [movie, setMovie] = useState([]);
+
   // API from TMDB
   const options = {
     method: "GET",

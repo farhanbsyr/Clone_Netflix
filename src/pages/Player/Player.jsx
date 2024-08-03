@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "./Player.css";
 import back_arrow from "../../assets/back_arrow_icon.png";
 const Player = () => {
   const { id } = useParams();
-
+  const navigate = useNavigate();
   const [detailMovie, setDetailMovie] = useState({
     name: "",
     key: "",
@@ -31,7 +31,14 @@ const Player = () => {
 
   return (
     <div className="player">
-      <img src={back_arrow} alt="back arrow" />
+      <img
+        src={back_arrow}
+        alt="back arrow"
+        width={50}
+        onClick={() => {
+          navigate(-2);
+        }}
+      />
       <iframe
         src={`https://www.youtube.com/embed/${detailMovie.key}`}
         width="90%"
