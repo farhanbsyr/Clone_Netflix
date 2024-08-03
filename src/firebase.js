@@ -36,8 +36,8 @@ const signup = async (name, email, password) => {
       email,
     });
   } catch (error) {
-    console.log(error);
-    toast.error(error);
+    console.log(error.code);
+    toast.error(error.code);
   }
 };
 
@@ -45,8 +45,8 @@ const login = async (email, password) => {
   try {
     await signInWithEmailAndPassword(auth, email, password);
   } catch (error) {
-    console.log(error);
-    toast.error(error);
+    console.log(error.code);
+    toast.error(error.code);
   }
 };
 
