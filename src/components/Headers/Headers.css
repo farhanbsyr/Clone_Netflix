@@ -71,3 +71,8 @@
 .header-profile:hover .dropdown {
   display: block;
 }
+
+/* header scroll */
+.nav-dark {
+  background: #141414;
+}

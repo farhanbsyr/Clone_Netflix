@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./Headers.css";
 import logos from "../../assets/logo.png";
 import search_icon from "../../assets/search_icon.svg";
@@ -9,8 +9,20 @@ import caret_icon from "../../assets/caret_icon.svg";
 import { Link } from "react-router-dom";
 
 const Headers = () => {
+  const navRef = useRef();
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY >= 80) {
+        navRef.current.classList.add("nav-dark");
+      } else {
+        navRef.current.classList.remove("nav-dark");
+      }
+    });
+  }, []);
+
   return (
-    <div className="headers">
+    <div ref={navRef} className="headers">
       <div className="header-left">
         <img src={logos} alt="logo netflix" width={100} />
         <ul>
