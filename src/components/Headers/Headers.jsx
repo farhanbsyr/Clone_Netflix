@@ -6,12 +6,15 @@ import bell_icon from "../../assets/bell_icon.svg";
 import profile_img from "../../assets/profile_img.png";
 import caret_icon from "../../assets/caret_icon.svg";
 
+import { Link } from "react-router-dom";
+
 const Headers = () => {
   return (
     <div className="headers">
       <div className="header-left">
         <img src={logos} alt="logo netflix" width={100} />
         <ul>
+          <Link to="/login">Login</Link>
           <li>Home</li>
           <li>TV Show</li>
           <li>Movie</li>
