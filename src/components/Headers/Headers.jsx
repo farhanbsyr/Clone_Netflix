@@ -7,6 +7,7 @@ import profile_img from "../../assets/profile_img.png";
 import caret_icon from "../../assets/caret_icon.svg";
 
 import { Link } from "react-router-dom";
+import { logout } from "../../firebase";
 
 const Headers = () => {
   const navRef = useRef();
@@ -41,7 +42,17 @@ const Headers = () => {
         <div className="header-profile">
           <img src={profile_img} alt="Profile Icon" className="icon profile" />
           <img src={caret_icon} alt="Caret Icon" className="icon drowdown" />
-          <div className="dropdown">Sign Out of Netflix</div>
+          <div className="dropdown">
+            <p
+              onClick={() => {
+                {
+                  logout();
+                }
+              }}
+            >
+              Sign Out of Netflix
+            </p>
+          </div>
         </div>
       </div>
     </div>
