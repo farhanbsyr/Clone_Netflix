@@ -31,7 +31,7 @@ const Home = () => {
               More Info
             </button>
           </div>
-          <TitleCards category={"now_playing"} />
+          <TitleCards title={"Upcoming"} category={"now_playing"} />
         </div>
       </div>
       <div className="more-cards">
