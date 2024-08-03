@@ -12,7 +12,7 @@ const Login = () => {
 
   const user_auth = async (event) => {
     event.preventDefault();
-    if (sign === true) {
+    if (sign === false) {
       await login(email, password);
     } else {
       await signup(name, email, password);
