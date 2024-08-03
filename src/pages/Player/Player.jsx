@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import "./Player.css";
 import back_arrow from "../../assets/back_arrow_icon.png";
 const Player = () => {
+  const { id } = useParams();
+
   const [detailMovie, setDetailMovie] = useState({
     name: "",
     key: "",
@@ -19,11 +21,11 @@ const Player = () => {
   };
   useEffect(() => {
     fetch(
-      "https://api.themoviedb.org/3/movie/533535/videos?language=en-US",
+      `https://api.themoviedb.org/3/movie/${id}/videos?language=en-US`,
       options
     )
       .then((response) => response.json())
-      .then((response) => setDetailMovie(response.results[0]))
+      .then((response) => setDetailMovie(response.results[3]))
       .catch((err) => console.error(err));
   }, []);
 
@@ -40,7 +42,7 @@ const Player = () => {
         frameBorder="0"
       ></iframe>
       <div className="player-info">
-        <p>{detailMovie.published_at}</p>
+        <p>{detailMovie.published_at.slice(0, 10)}</p>
         <p>{detailMovie.name}</p>
         <p>{detailMovie.type}</p>
       </div>

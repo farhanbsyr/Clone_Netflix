@@ -4,6 +4,7 @@ import cards_data from "../../assets/cards/Cards_data";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Pagination } from "swiper/modules";
+import { Link } from "react-router-dom";
 
 const TitleCards = ({ title, category }) => {
   const [movie, setMovie] = useState([]);
@@ -42,11 +43,13 @@ const TitleCards = ({ title, category }) => {
             className="swiper-slide card"
             style={{ width: "250px" }}
           >
-            <img
-              src={`https://image.tmdb.org/t/p/w500/${card.backdrop_path}`}
-              alt={card.original_title}
-            />
-            <p>{card.original_title}</p>
+            <Link to={`/player/${card.id}`}>
+              <img
+                src={`https://image.tmdb.org/t/p/w500/${card.backdrop_path}`}
+                alt={card.original_title}
+              />
+              <p>{card.original_title}</p>
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>
