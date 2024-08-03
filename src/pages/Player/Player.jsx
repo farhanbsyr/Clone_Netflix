@@ -6,7 +6,7 @@ const Player = () => {
   const [detailMovie, setDetailMovie] = useState({
     name: "",
     key: "",
-    published_At: "",
+    published_at: "",
     typeof: "",
   });
   const options = {
@@ -40,9 +40,9 @@ const Player = () => {
         frameBorder="0"
       ></iframe>
       <div className="player-info">
-        <p>{detailMovie.published_At}</p>
+        <p>{detailMovie.published_at}</p>
         <p>{detailMovie.name}</p>
-        <p>{detailMovie.typeof}</p>
+        <p>{detailMovie.type}</p>
       </div>
     </div>
   );
