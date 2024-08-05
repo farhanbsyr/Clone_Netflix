@@ -60,3 +60,9 @@
 .more-cards {
   padding-left: 6%;
 }
+
+/* responsive */
+@media (max-width: 1024px) {
+  .hero-caption .title-cards {
+  }
+}
